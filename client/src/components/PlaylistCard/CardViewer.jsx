@@ -107,16 +107,11 @@ export default function CardViewer({ cardBase64, pageBase64, vibrantColor, playl
       style={{
         backgroundColor: darkenHexColor(vibrantColor, 0.55), // Fundo escurecido
         minHeight: '100vh',
-        display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
       }}
     >
-      <div
-        className="card-wrapper"
-        onMouseMove={handleMouseMove} // Detecta movimento do mouse
-        onMouseLeave={handleMouseLeave} // Detecta saída do mouse
-      >
+      <div className="card-wrapper" onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
         <div
           className="card"
           ref={cardRef}
